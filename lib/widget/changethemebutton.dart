@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:theme_task/bloc/theme/theme_bloc.dart';
 import 'package:theme_task/bloc/theme/theme_event.dart';
+import 'package:theme_task/src/string.dart';
 
 class ThemeSelector extends StatelessWidget {
   const ThemeSelector({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class ThemeSelector extends StatelessWidget {
         key: const ValueKey('ThemeSelector'),
         itemBuilder: (ctx) => [
           PopupMenuItem(
-            key: const ValueKey('lightMode'),
+            key: const ValueKey(Strings.lightmode),
             onTap: () {
               themeBloc.add(ThemeToggle(ThemeMode.light));
             },
@@ -28,7 +29,7 @@ class ThemeSelector extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
-                    "lightMode",
+                    Strings.lightmode,
                   ),
                 ),
               ],
@@ -48,7 +49,7 @@ class ThemeSelector extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
-                    "darkMode",
+                    Strings.darkmode,
                   ),
                 ),
               ],
@@ -68,7 +69,7 @@ class ThemeSelector extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
-                    "systemDefault",
+                    Strings.defalutmode,
                   ),
                 ),
               ],

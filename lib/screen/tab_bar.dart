@@ -39,11 +39,11 @@ class _TabBarScreenState extends State<TabBarScreen>
       child: DefaultTabController(
         length: Strings.name.length,
         child: Scaffold(
+          backgroundColor: Theme.of(context).backgroundColor,
           appBar: AppBar(
-            actions: [ThemeSelector()],
+            actions: const [ThemeSelector()],
             title: const Text(
               Strings.title,
-              style: TextStyle(fontSize: 20),
             ),
             bottom: TabBar(
               controller: _tabController,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:theme_task/data/apptheme.dart';
 import 'package:theme_task/model/contact_data_model.dart';
 
 Widget listItem(BuildContext context, List<Contact> contactdata) {
@@ -22,14 +23,14 @@ Widget listItem(BuildContext context, List<Contact> contactdata) {
 Widget userList(
     BuildContext context, int index, String name, String number, String url) {
   return Container(
-    decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(5)),
-        color: Colors.white,
+    decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
+        color: Theme.of(context).bottomAppBarColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0.0, 1.0), //(x,y)
-            blurRadius: 1.0,
+            color: Theme.of(context).canvasColor,
+            offset: const Offset(0.0, 1.0), //(x,y)
+            blurRadius: 6.0,
           ),
         ]),
     width: double.infinity,
@@ -46,10 +47,8 @@ Widget userList(
             children: <Widget>[
               Text(
                 name,
-                style: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
               const SizedBox(
                 height: 6,
@@ -60,10 +59,7 @@ Widget userList(
                     width: 5,
                   ),
                   Text(number,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          letterSpacing: .3)),
+                      style: const TextStyle(fontSize: 15, letterSpacing: .3)),
                 ],
               ),
             ],

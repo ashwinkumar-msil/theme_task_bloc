@@ -24,10 +24,11 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Theme.of(context).backgroundColor,
         body: SingleChildScrollView(
-      child: Center(
-        child: listItem(context, data),
-      ),
-    ));
+          child: Center(
+            child: listItem(context, data),
+          ),
+        ));
   }
 }
