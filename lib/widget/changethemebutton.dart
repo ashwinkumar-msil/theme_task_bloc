@@ -13,10 +13,8 @@ class ThemeSelector extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 20),
       child: PopupMenuButton(
-        key: const ValueKey('ThemeSelector'),
         itemBuilder: (ctx) => [
           PopupMenuItem(
-            key: const ValueKey(Strings.lightmode),
             onTap: () {
               themeBloc.add(ThemeToggle(ThemeMode.light));
             },
@@ -36,7 +34,6 @@ class ThemeSelector extends StatelessWidget {
             ),
           ),
           PopupMenuItem(
-            key: const ValueKey('darkMode'),
             onTap: () {
               themeBloc.add(ThemeToggle(ThemeMode.dark));
             },
@@ -56,7 +53,6 @@ class ThemeSelector extends StatelessWidget {
             ),
           ),
           PopupMenuItem(
-            key: const ValueKey('systemDefault'),
             onTap: () {
               themeBloc.add(ThemeToggle(ThemeMode.system));
             },
@@ -81,17 +77,14 @@ class ThemeSelector extends StatelessWidget {
             if (state == ThemeMode.dark) {
               return const Icon(
                 Icons.dark_mode,
-                key: ValueKey('darkIcon'),
               );
             } else if (state == ThemeMode.light) {
               return const Icon(
                 Icons.light_mode,
-                key: ValueKey('lightIcon'),
               );
             } else {
               return const Icon(
                 Icons.dark_mode_outlined,
-                key: ValueKey('systemIcon'),
               );
             }
           },

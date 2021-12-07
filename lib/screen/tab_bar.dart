@@ -41,7 +41,9 @@ class _TabBarScreenState extends State<TabBarScreen>
         child: Scaffold(
           backgroundColor: Theme.of(context).backgroundColor,
           appBar: AppBar(
-            actions: const [ThemeSelector()],
+            actions: const [
+              ThemeSelector(),
+            ],
             title: const Text(
               Strings.title,
             ),

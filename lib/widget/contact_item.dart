@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:theme_task/data/apptheme.dart';
 import 'package:theme_task/model/contact_data_model.dart';
 
 Widget listItem(BuildContext context, List<Contact> contactdata) {

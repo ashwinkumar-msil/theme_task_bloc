@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       create: (context) => ThemeBloc(),
       child: BlocBuilder<ThemeBloc, ThemeMode>(
         builder: (context, state) {
-          ThemeMode themeData = ThemeMode.light;
+       
 
           return MaterialApp(
             title: Strings.appTitle,
